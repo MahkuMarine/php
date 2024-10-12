@@ -62,40 +62,22 @@
         .nav-container #menu ul {
             list-style: none;
             width: 30%;
-            height: 22vh;
+            height: fit-content;
             position: absolute;
             top: 0;
             right: -250px;
             transition: 0.4s ease-in-out;
             text-align: left;
-            padding: 1em 0;
-            /* background-color: rgba(187, 238, 255, 0.6); */
-        }
-
-        .nav-container #menu li {
-            position: relative;
+            padding: 1.2em 0;
+            background-color: rgba(187, 238, 255, 0.6);
         }
 
         .nav-container #menu li a {
             color: #bbeeff;
             text-decoration: none;
-            font-size: 1em;
             font-weight: 600;
             padding: 5.4% 0.9rem;
             display: block;
-        }
-
-        .nav-container #menu li:hover a::after {
-            content: "";
-            display: block;
-            width: 35%;
-            height: 55%;
-            border-radius: 50% 25%;
-            background-color: #3aea;
-            position: absolute;
-            right: 4em;
-            top: 0.6em;
-            z-index: -1;
         }
 
         .nav-container .checkbox:checked~#menu ul {
@@ -110,6 +92,7 @@
             visibility: visible;
         }
 
+        /** BANNER / HERO SECTION */
         .banner {
             position: relative;
         }
@@ -151,52 +134,59 @@
             display: inline-block;
         }
 
-        @media only screen and (min-width: 769px) {
+        @media only screen and (min-width: 768px) {
+
+            /**NAV RESPONSIVENESS */
             .nav-container .checkbox {
                 display: none;
             }
 
             nav {
-                position: absolute;
-                top: 0;
                 background: transparent;
                 display: block;
+                padding: 0;
             }
 
             .nav-container #menu ul {
                 width: 100%;
-                height: 0;
-                position: static;
+                height: fit-content;
+                position: sticky;
                 background-color: transparent;
                 display: flex;
                 justify-content: end;
+                padding-right: 1rem;
+            }
+
+            .nav-container #menu li {
+                position: relative;
             }
 
             .nav-container #menu li a {
-                color: #bbeeff;
-                text-decoration: none;
-                font-size: 1.35em;
                 font-weight: 500;
-                display: block;
+                padding: 0 0.7rem;
             }
 
-            .nav-container #menu li:hover a::after {
+            .nav-container #menu li:hover a::after{
                 content: "";
                 display: block;
-                width: 35%;
-                height: 55%;
-                border-radius: 50% 25%;
                 background-color: #3aea;
-                position: static;
-                right: 0;
-                top: 0;
-                z-index: 1000;
+                width: 45%;
+                height: 75%;
+                border-radius: 50% 25%;
+                position: absolute;
+                right: 1.6em;
+                top: .2em;
+                z-index: -1;
             }
 
             nav i.fa-bars,
             nav i.fa-x {
                 display: none;
             }
+
+            /**BANNER / HERO RESPONSIVENESS */
+
+
         }
     </style>
 </head>
