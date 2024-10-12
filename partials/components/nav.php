@@ -24,11 +24,24 @@
             position: absolute;
             top: 1.5em;
             right: 1.5em;
-            height: 5em;
-            width: 5em;
+            height: 3em;
+            width: 3em;
             opacity: 0;
-            cursor: pointer;
             z-index: 5;
+        }
+
+        nav i.fa-bars,
+        nav i.fa-x {
+            font-size: 1.9em;
+            color: rgba(215, 235, 245);
+            position: absolute;
+            right: 0.7em;
+            top: 0.7em;
+            cursor: pointer;
+        }
+
+        nav i.fa-x {
+            visibility: hidden;
         }
 
         nav {
@@ -45,14 +58,14 @@
 
         .nav-container #menu ul {
             list-style: none;
-            width: 20em;
-            height: 28.5em;
+            width: 8em;
+            height: 22vh;
             position: absolute;
             top: 0;
-            right: -150em;
+            right: 0;
             transition: 0.4s ease-in-out;
             text-align: left;
-            padding: 1.6em;
+            padding: 1em 0;
             background-color: rgba(187, 238, 255, 0.6);
         }
 
@@ -63,7 +76,7 @@
         .nav-container #menu li a {
             color: #bbeeff;
             text-decoration: none;
-            font-size: 2.5em;
+            font-size: 1em;
             font-weight: 600;
             padding: 0.53em 0.9rem;
             display: block;
@@ -92,19 +105,6 @@
 
         .nav-container .checkbox:checked~#menu i.fa-x {
             visibility: visible;
-        }
-
-        nav i.fa-bars,
-        nav i.fa-x {
-            font-size: 2.6em;
-            color: rgba(215, 235, 245);
-            position: absolute;
-            right: 0.86em;
-            top: 0.8em;
-        }
-
-        nav i.fa-x {
-            visibility: hidden;
         }
 
         @media only screen and (min-width: 769px) {
